@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-class TodoItem extends React.Component {
+class TodoItem extends Component {
 
     // 子组件如果想和父组件通信，子组件需要调用父组件传递过来的方法
 

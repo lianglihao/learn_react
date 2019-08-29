@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component, Fragment } from 'react';
 import './App.css';
 import TodoItem from './TodoItem'
 
-class TodoList extends React.Component {
+class TodoList extends Component {
 
   constructor(props) {
     super(props)
@@ -65,15 +65,15 @@ class TodoList extends React.Component {
   // 子组件通过props接受父组件传递过来的参数
   render() {
     return (
-      <div>
+      <Fragment>
         <div>
           <input value={this.state.inputValue} onChange={this.handleInputChange}/>
-          <button onClick={this.handleBtnClick}>add</button>
+          <button className='red-btn' style={{color: 'red'}} onClick={this.handleBtnClick}>add</button>
         </div>
         <ul>
           {this.getTodoItems()}
         </ul>
-      </div>
+      </Fragment>
     )
   }
 }
